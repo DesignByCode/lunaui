@@ -1,0 +1,5 @@
+export const  primaryColor = '#2075d0'
+export const  secondaryColor = '#e91e63'
+export const  triColor = '#380f8f'
+export const  darkColor = '#0a0e24'
+export const  muteColor = '#f7f7f7'

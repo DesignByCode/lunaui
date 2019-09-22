@@ -1,0 +1,352 @@
+// ==========================================
+// == Luna Framework
+// == AUTHOR: CLAUDE MYBURGH
+// == URL: http://designbycode.co.za
+// ==========================================
+
+// Variables
+//
+// You can override the default values by setting the variables in your Sass
+// before importing the normalize-scss library.
+
+// The font size set on the root html element.
+$base-font-size: 16px !default
+$base-icon-size: 14px !default
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 24px !default
+
+// The length unit in which to output vertical rhythm values.
+// Supported values: px, em, rem.
+$base-unit: 'em' !default
+
+// The default font family.
+$base-font-family: 'Roboto', sans-serif !default
+
+// The font sizes for h1-h6.
+$h1-font-size: 2.2   * $base-font-size !default
+$h2-font-size: 1.5  * $base-font-size !default
+$h3-font-size: 1.17 * $base-font-size !default
+$h4-font-size: 1    * $base-font-size !default
+$h5-font-size: 0.83 * $base-font-size !default
+$h6-font-size: 0.67 * $base-font-size !default
+
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 40px !default
+
+// The following variable controls whether normalize-scss will output
+// font-sizes, line-heights and block-level top/bottom margins that form a basic
+// vertical rhythm on the page, which differs from the original Normalize.css.
+// However, changing any of the variables above will cause
+// $normalize-vertical-rhythm to be automatically set to true.
+$normalize-vertical-rhythm: true !default
+
+
+
+$the__column__count: 12
+$the__width__of__wrapper: 98%
+$the__max__width__of__wrapper: 1140px
+$the__global__padding: 10px
+
+
+// ==========================================
+// == BREAKPOINTS VALUES FOR GRID
+// ==========================================
+
+// == Extra Small breakpoint
+$grid__breakpoint__xs: 300px
+// == Mobile breakpoint size (value in px)
+$grid__breakpoint__sm: 480px
+// == Table breakpoint size (value in px)
+$grid__breakpoint__md: 800px
+// == Old CTR Screens breakpoint size (value in px)
+$grid__breakpoint__lg: 960px
+// == Wide Screens breakpoint size (value in px)
+$grid__breakpoint__xl: 1170px
+
+$mobile__view: 800px
+$tablet_view: 960px
+// == if additional breakpoints is created, just add it to the breakpoints map
+
+$_breakpoints : (xs: $grid__breakpoint__xs, sm: $grid__breakpoint__sm, md: $grid__breakpoint__md, lg: $grid__breakpoint__lg, xl: $grid__breakpoint__xl)
+
+
+// ==========================================
+// == Global Styles
+// ==========================================
+
+
+$global-border-radius: 3px
+
+$global-background-color: #fff
+$global-font-color: #333
+$global-link-color: #2075d0
+$global-header-font: 'Montserrat Alternates', sans-serif
+$global-body-font: $base-font-family // override normalize base font family
+
+$font-path: '../fonts'
+
+@import "~luna-sass/Framework/sass/vendor/icons"
+// ==========================================
+// == Colors
+// ==========================================
+
+
+// Main Colors
+$primary-color: #0071bc
+$secondary-color: #e91e63
+$tri-color: #380f8f
+$dark-color: #0a0e24
+
+$mute-color: #f7f7f7
+$mute-border-color: #ddddde //#e6e9ec
+
+$well-color: $mute-color
+$well-border-color: $mute-border-color
+
+// notifacation colors
+$info-color: #0071bc
+$warning-color: #f09300
+$success-color: #008c3a
+$danger-color: #ea4335
+
+// ==========================================
+// == COLOR MAP
+// ==========================================
+
+$_colors: (primary: $primary-color, secondary: $secondary-color, tri: $tri-color, dark: $dark-color)
+$_custom_colors: ('black': #000, 'white': #fff)
+
+$_nofiy_colors: (default: #fff, info: $info-color, success: $success-color, warning: $warning-color, danger: $danger-color, )
+
+// Merge Colors
+$_color_set: map-merge($_colors, $_custom_colors)
+$_color_set: map-merge($_color_set, $_nofiy_colors)
+
+// ==========================================
+// == Button Config
+// ==========================================
+
+
+$the__button__font__size: $base-font-size
+$the__button__font__weight: 400
+$the__button__border__radius: $global-border-radius
+$the__button__default__hover__background__color: #e1f3fc
+
+
+// ==========================================
+// == Navigation
+// ==========================================
+
+$navigation__breakpoint: 900px
+$navigation__height: 60px
+$navigation__dropdown__links__height: 50px
+
+$navigation__padding: 0px
+$navigation__brand__color: #fff
+$navigation__brand__font__size: 28px
+$navigation__background__color: #0a0e24
+
+$navigation__links__color: #eee
+$navigation__links__color__hover: #eee
+
+$navigation__links__background__color: transparent
+$navigation__links__background__color__hover: $primary-color
+// Submenu
+$navigation__submenu__links__width: 200px
+$navigation__submenu__links__color: $dark-color
+$navigation__submenu__links__color__hover: $dark-color
+$navigation__submenu__links__background__color: #eee
+$navigation__submenu__links__background__color__hover: darken(#eee, 5%)
+
+// Nav Button
+$navicon__backgound__color: transparent
+$navicon__color: $dark-color
+$navicon__font__size: 16px
+$navicon__size: 40px
+
+// Form Settings
+$navigation__form__height: 40px
+$navigation__form__width: 200px
+$navigation__form__button__width: 40px
+
+// change if navigation__height was changed or background color added
+$navicon__position__right: 18px
+
+$mobile__navigation__height: 50px
+
+
+
+// ==========================================
+// == Form
+// ==========================================
+
+$the__form__font__size: $the__button__font__size
+$the__form__font__weight: $the__button__font__weight
+$the__form__border__radius: $the__button__border__radius
+$the__form__border__color: darken($mute-color, 5%)
+
+$the__form__checkbox__icon: $unicode-checkmark
+$the__form__checkbox__icon__font: "Lunacon"
+$the__form__checkbox__icon__color: $primary-color
+$the__form__checkbox__icon__size: $base-font-size
+$the__form__checkbox__icon__offset__top: 3px
+$the__form__checkbox__checkmark__offset__top: 0px
+$the__form__checkbox__icon__offset__left: 2px
+$the__form__checkbox__icon__border__focus__color: $primary-color
+$the__form__checkbox__icon__border__hover__color: $primary-color
+
+
+
+
+// ==========================================
+// == Notify Config
+// ==========================================
+
+$the__notify__border__radius: $global-border-radius
+
+
+// ==========================================
+// == Scrollbar
+// ==========================================
+
+$scrollbar__track__background__color: $mute-color
+$scrollbar__thumb__background__color: $primary-color
+$scrollbar__thumb__border__color: $mute-color
+$scrollbar__thumb__border__width: 1px
+$scrollbar__track__width: 10px
+$scrollbar__track__height: 8px
+$scrollbar__track__radius: 0px
+$scrollbar__track__border__color: $mute-color
+$scrollbar__track__border__width: 1px
+
+
+// ==========================================
+// == Scroll to top button
+// ==========================================
+
+$scrolltotop__size: 50px
+$scrolltotop__background__color: $primary-color
+$scrolltotop__icon__color: white
+$scrolltotop__icon__size: 20px
+$scrolltotop__border__radius: 3px
+
+
+// ==========================================
+// == Data Table
+// ==========================================
+
+$table__background__color: #fff
+$table__border__color: $mute-border-color
+$table__background__color__default__hover: $mute-border-color
+$table__text__color__header: $dark-color
+$table__text__color__default__hover: $global-font-color
+$table__background__color__striped__odd: $mute-border-color
+
+// ==========================================
+// == Dropdown buttom
+// ==========================================
+
+$dropdown__container__background__color: #eee
+$dropdown__container__text__color: $global-font-color
+$dropdown__container__width: 260px
+
+
+
+
+// ==========================================
+// == Card
+// ==========================================
+
+
+$card__background__color: #fff
+$card__text__color: #eee
+$card__footer__background__color: $mute-color
+$card__footer__text__color: #ddd
+$card__footer__icon__color: $primary-color
+$card__shadow: 0 0 20px rgba(black,0.1)
+$card__shadow__hover: 0 0 50px rgba(black,0.3)
+
+$card__title__font__size:	$h2-font-size
+$card__title__font__color: $global-font-color
+$card__subtitle__font__size: $h3-font-size
+$card__subtitle__font__color: $primary-color
+$card__description__font__size:	$base-font-size
+$card__description__font__color: $global-font-color
+
+$card__label__background__color: $primary-color
+$card__label__text__color: #fff
+
+
+
+// ==========================================
+// == Timeline
+// ==========================================
+
+
+
+$timeline__media__breakpoint: 800px
+$timeline__line__color: $primary-color
+
+$timeline__padding: $the__global__padding
+
+$timeline__flag__background__color: $mute-color
+$timeline__flag__text__color: $global-font-color
+$timeline__flag__radius: 20px 0
+
+$timeline__flag__pointer__color: $dark-color
+$timeline__flag__marker__color: #fff
+$timeline__flag__marker__border__color: $dark-color
+$timeline__flag__marker__border__width: 5px
+
+$timeline__date__label__background__color: $dark-color
+$timeline__date__label__text__color: #eee
+$timeline__date__label__padding: 5px 10px
+$timeline__date__label__border-radius: 20px 0
+$timeline__date__label__position: top // top || bottom
+$timeline__date__offset: -$timeline__padding //not negative
+
+
+// ==========================================
+// == Accordian
+// ==========================================
+
+$accordian__radius: 3px
+$accordian__border__color: $mute-border-color
+// Header
+$accordian__header__background__color: #fff
+$accordian__header__background__color__hover: $mute-color
+$accordian__header__background__color__active: #fff
+
+$accordian__header__text__color: $global-font-color
+$accordian__header__text__color__hover: $global-font-color
+$accordian__header__text__color__active: $global-font-color
+// Body
+$accordian__body__background__color: $mute-color
+$accordian__body__text__color: $global-font-color
+//  icons
+$accordian__header__icon__color: $mute-border-color
+$accordian__header__icon__background__color: $mute-color
+$accordian__header__icon__background__border__color: $mute-border-color
+// icon active
+$accordian__header__icon__color__active: $mute-border-color
+$accordian__header__icon__background__color__active: #fff
+$accordian__header__icon__background__border__color__active: $mute-border-color
+
+
+
+
+// ==========================================
+// == List
+// ==========================================
+
+
+$list__background__color: #fff
+$list__background__color__hover: $mute-color
+$list__border__color: $mute-border-color
+$list__text__color: $dark-color
+$list__text__color__hover: $primary-color
+$list__item__padding: $the__global__padding
+$list__link__color: $global-link-color
+$list__link__color__hover: $global-link-color
