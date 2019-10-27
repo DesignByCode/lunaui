@@ -58,7 +58,7 @@ class LunaUiCommand extends Command
         Presets\LunaSass::install();
 
         $this->info('Luna scaffolding installed successfully.');
-        $this->comment('Please run "yarn && npm run dev" to compile your fresh scaffolding.');
+        $this->comment('Please run "yarn && npm run watch" to compile your fresh scaffolding.');
     }
 
     /**
@@ -72,7 +72,7 @@ class LunaUiCommand extends Command
         Presets\Vue::install();
 
         $this->info('Vue with luna scaffolding installed successfully.');
-        $this->comment('Please run "yarn && npm run dev" to compile your fresh scaffolding.');
+        $this->comment('Please run "yarn && npm run watch" to compile your fresh scaffolding.');
     }
 
 }

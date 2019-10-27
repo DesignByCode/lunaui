@@ -22,4 +22,4 @@ Documentation can be found on the [Laravel website](https://laravel.com/docs/fro
 
 ## License
 
-Laravel UI is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Laravel-Helper is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

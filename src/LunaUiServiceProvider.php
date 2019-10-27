@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace DesignByCode\LunaUi;
 
@@ -17,7 +17,7 @@ class LunaUiServiceProvider extends ServiceProvider implements DeferrableProvide
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                 AuthCommand::class,
+                AuthCommand::class,
                 LunaUiCommand::class,
             ]);
         }
@@ -31,7 +31,7 @@ class LunaUiServiceProvider extends ServiceProvider implements DeferrableProvide
     public function provides()
     {
         return [
-             AuthCommand::class,
+            AuthCommand::class,
             LunaUiCommand::class,
         ];
     }
