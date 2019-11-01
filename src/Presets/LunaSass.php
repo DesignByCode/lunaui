@@ -11,6 +11,7 @@ class LunaSass extends Preset
      */
     public static function install()
     {
+        static::removeSassFiles();
         static::updatePackages();
         static::updateSass();
         static::updateWebpackConfiguration();

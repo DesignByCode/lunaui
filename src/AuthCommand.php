@@ -4,6 +4,7 @@ namespace DesignByCode\LunaUi;
 
 use InvalidArgumentException;
 use Illuminate\Console\Command;
+use DesignByCode\LunaUi\Presets\LunaSass;
 
 class AuthCommand extends Command
 {
@@ -13,7 +14,7 @@ class AuthCommand extends Command
      * @var string
      */
     protected $signature = 'ui:auth
-                    { type=luna : The preset type (Luna) }
+                    { type=luna : The preset type (luna) }
                     {--views : Only scaffold the authentication views}
                     {--force : Overwrite existing views by default}';
 
@@ -53,7 +54,7 @@ class AuthCommand extends Command
         if (static::hasMacro($this->argument('type'))) {
             return call_user_func(static::$macros[$this->argument('type')], $this);
         }
-        
+
         if (! in_array($this->argument('type'), ['luna'])) {
             throw new InvalidArgumentException('Invalid preset.');
         }
@@ -66,7 +67,7 @@ class AuthCommand extends Command
             $this->exportBackend();
         }
 
-        $this->info('Authentication scaffolding generated successfully.');
+        $this->info('Luna-sass with authentication scaffolding generated successfully.');
     }
 
     /**

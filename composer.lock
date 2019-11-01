@@ -4,21 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "939e3366c581597ceab1333efc68043d",
+    "content-hash": "d1c9eb3e2a56e032f72ce03d1d53120d",
     "packages": [
         {
             "name": "designbycode/laravel-helpers",
-            "version": "v1.0.0.rc.1.2",
+            "version": "v1.0.0-rc.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/DesignByCode/LaravelHelpers.git",
-                "reference": "65dc43fedb3c0fa0c55c58ef0b5cdf4c14b375ea"
+                "url": "https://github.com/DesignByCode/laravel-helpers.git",
+                "reference": "29cfc997067d42875518ddc58c3eb542816f40ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DesignByCode/LaravelHelpers/zipball/65dc43fedb3c0fa0c55c58ef0b5cdf4c14b375ea",
-                "reference": "65dc43fedb3c0fa0c55c58ef0b5cdf4c14b375ea",
+                "url": "https://api.github.com/repos/DesignByCode/laravel-helpers/zipball/29cfc997067d42875518ddc58c3eb542816f40ba",
+                "reference": "29cfc997067d42875518ddc58c3eb542816f40ba",
                 "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.8|^6.0",
+                "php": "^7.2"
             },
             "type": "library",
             "extra": {
@@ -41,6 +45,9 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Claude Myburgh",
@@ -48,7 +55,14 @@
                 }
             ],
             "description": "Simple laravel helper utilities",
-            "time": "2019-10-21T16:38:14+00:00"
+            "keywords": [
+                "active class",
+                "body class",
+                "laravel-helper",
+                "menu active",
+                "set classes"
+            ],
+            "time": "2019-11-01T12:29:33+00:00"
         },
         {
             "name": "doctrine/inflector",
