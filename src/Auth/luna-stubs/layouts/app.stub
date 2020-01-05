@@ -17,7 +17,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="{{ set_body() }}">
     <div id="app">
 
         @include('partials._nav')

@@ -4,9 +4,73 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "779d44fc127496a09683b37f75557842",
     "packages": [
         {
+=======
+    "content-hash": "d1c9eb3e2a56e032f72ce03d1d53120d",
+    "packages": [
+        {
+            "name": "designbycode/laravel-helpers",
+            "version": "v1.0.0-rc.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DesignByCode/laravel-helpers.git",
+                "reference": "29cfc997067d42875518ddc58c3eb542816f40ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DesignByCode/laravel-helpers/zipball/29cfc997067d42875518ddc58c3eb542816f40ba",
+                "reference": "29cfc997067d42875518ddc58c3eb542816f40ba",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.8|^6.0",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": [],
+                "laravel": {
+                    "providers": [
+                        "DesignByCode\\Helpers\\Providers\\HelpersServiceProvider"
+                    ],
+                    "aliases": {
+                        "Set": "DesignByCode\\Helpers\\Facades\\Set"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DesignByCode\\Helpers\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Claude Myburgh",
+                    "email": "claude@deisgnbycode.co.za"
+                }
+            ],
+            "description": "Simple laravel helper utilities",
+            "keywords": [
+                "active class",
+                "body class",
+                "laravel-helper",
+                "menu active",
+                "set classes"
+            ],
+            "time": "2019-11-01T12:29:33+00:00"
+        },
+        {
+>>>>>>> cebc145635f4af6aeb6de663705c7da3671f2f7f
             "name": "doctrine/inflector",
             "version": "1.3.1",
             "source": {
