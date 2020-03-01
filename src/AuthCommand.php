@@ -13,7 +13,7 @@ class AuthCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'ui:auth
+    protected $signature = 'lunaui:auth
                     { type=luna : The preset type (luna) }
                     {--views : Only scaffold the authentication views}
                     {--force : Overwrite existing views by default}';
@@ -34,6 +34,7 @@ class AuthCommand extends Command
         'auth/login.stub' => 'auth/login.blade.php',
         'auth/passwords/email.stub' => 'auth/passwords/email.blade.php',
         'auth/passwords/reset.stub' => 'auth/passwords/reset.blade.php',
+        'auth/passwords/confirm.stub' => 'auth/passwords/confirm.blade.php',
         'auth/register.stub' => 'auth/register.blade.php',
         'auth/verify.stub' => 'auth/verify.blade.php',
         'home.stub' => 'home.blade.php',
@@ -103,11 +104,7 @@ class AuthCommand extends Command
                     continue;
                 }
             }
-
-            copy(
-                __DIR__.'/Auth/'.$this->argument('type').'-stubs/'.$key,
-                $view
-            );
+            copy(__DIR__.'/Auth/'.$this->argument('type').'-stubs/'.$key, $view);
         }
     }
 
@@ -118,6 +115,8 @@ class AuthCommand extends Command
      */
     protected function exportBackend()
     {
+        $this->callSilent('lunaui:controllers');
+
         file_put_contents(
             app_path('Http/Controllers/HomeController.php'),
             $this->compileControllerStub()
@@ -128,6 +127,12 @@ class AuthCommand extends Command
             file_get_contents(__DIR__.'/Auth/stubs/routes.stub'),
             FILE_APPEND
         );
+
+        copy(
+            __DIR__.'/../stubs/migrations/2014_10_12_100000_create_password_resets_table.php',
+            base_path('database/migrations/2014_10_12_100000_create_password_resets_table.php')
+        );
+
     }
 
     /**

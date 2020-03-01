@@ -2,11 +2,11 @@
 
 namespace DesignByCode\LunaUi;
 
-
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Contracts\Support\DeferrableProvider;
 
-class LunaUiServiceProvider extends ServiceProvider implements DeferrableProvider
+
+class LunaUiServiceProvider extends ServiceProvider
 {
     /**
      * Register the package services.
@@ -19,20 +19,20 @@ class LunaUiServiceProvider extends ServiceProvider implements DeferrableProvide
             $this->commands([
                 AuthCommand::class,
                 LunaUiCommand::class,
+                ControllersCommand::class
             ]);
         }
     }
 
     /**
-     * Get the services provided by the provider.
+     * Bootstrap any application services.
      *
-     * @return array
+     * @return void
      */
-    public function provides()
+    public function boot()
     {
-        return [
-            AuthCommand::class,
-            LunaUiCommand::class,
-        ];
+        Route::mixin(new AuthRouteMethods);
     }
+
+
 }

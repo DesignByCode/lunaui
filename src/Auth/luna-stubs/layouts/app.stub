@@ -21,8 +21,6 @@
     <div id="app">
 
         @include('partials._nav')
-        @include('partials._status')
-
         <main class="main">
             @yield('content')
         </main>

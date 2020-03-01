@@ -12,7 +12,7 @@ class LunaUiCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'ui
+    protected $signature = 'lunaui
                     { type : The preset type (luna, vue) }
                     { --auth : Install authentication UI scaffolding }
                     { --option=* : Pass an option to the preset command }';
@@ -44,7 +44,7 @@ class LunaUiCommand extends Command
         $this->{$this->argument('type')}();
 
         if ($this->option('auth')) {
-            $this->call('ui:auth');
+            $this->call('lunaui:auth');
         }
     }
 
