@@ -20,22 +20,22 @@ After instalation you can run the following commands to scaffold your project
 
 __For Luna-sass with authentication__ 
 ```
-$ php artisan ui:auth
+$ php artisan lunaui:auth
 ```
 
 __For Luna-sass without authentication__
 ```
-$ php artisan ui luna
+$ php artisan lunaui luna
 ```
 
 __For Luna-sass with Vuejs and without authentication__
 ```
-$ php artisan ui vue
+$ php artisan lunaui vue
 ```
 
 __For Luna-sass with Vuejs and with authentication__
 ```
-$ php artisan ui vue --auth
+$ php artisan lunaui vue --auth
 ```
 
 
