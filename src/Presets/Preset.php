@@ -84,8 +84,6 @@ class Preset
      */
     protected static function removeSassFiles()
     {
-        tap(new Filesystem, function ($files) {
-            $files->delete(resource_path('sass/app.scss'));
-        });
+        (new Filesystem)->cleanDirectory(resource_path('/sass'));
     }
 }

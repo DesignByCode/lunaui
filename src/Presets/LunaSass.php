@@ -2,6 +2,9 @@
 
 namespace DesignByCode\LunaUi\Presets;
 
+
+use Illuminate\Support\Arr;
+
 class LunaSass extends Preset
 {
     /**
@@ -29,8 +32,23 @@ class LunaSass extends Preset
     protected static function updatePackageArray(array $packages)
     {
         return [
-            "luna-sass" => "1.x",
-        ] + $packages;
+            "luna-sass" => "^1.16",
+            'resolve-url-loader' => '^2.3.1',
+            'sass' => '^1.20.1',
+            'sass-loader' => '^7.*',
+            'jquery' => '^3.2',
+            "path" =>  "^0.12.7",
+            "copy-webpack-plugin" => "^4.x",
+            "cross-env" => "^5.2.1",
+            "imagemin-mozjpeg" => "^7.x",
+            "imagemin-webpack-plugin" => "^2.x",
+        ] + Arr::except($packages, [
+            "vue",
+            "vue-template-compiler",
+            '@babel/preset-react',
+            'react',
+            'react-dom'
+        ]);
     }
 
     /**
@@ -62,6 +80,7 @@ class LunaSass extends Preset
     protected static function updateBootstrapping()
     {
         copy(__DIR__.'/luna-stubs/bootstrap.js', resource_path('js/bootstrap.js'));
+        copy(__DIR__.'/luna-stubs/app.js', resource_path('js/app.js'));
         copy(__DIR__.'/luna-stubs/defaults.js', resource_path('js/defaults.js'));
     }
 
