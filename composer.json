@@ -1,6 +1,6 @@
 {
     "name": "designbycode/lunaui",
-    "description": "Luna-sass preset for Laravel 6",
+    "description": "Luna-sass preset for Laravel 7",
     "keywords": ["laravel", "luna-sass", "ui"],
     "license": "MIT",
     "authors": [
