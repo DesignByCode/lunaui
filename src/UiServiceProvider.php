@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 
-class LunaUiServiceProvider extends ServiceProvider
+class UiServiceProvider extends ServiceProvider
 {
     /**
      * Register the package services.

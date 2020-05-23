@@ -4,10 +4,10 @@
         <div class="nav__navicon"></div>
         <div class="nav__links__wrapper nav__links--right">
             <ul class="nav__links">
-                <li class="nav__links__item {{ set_active('/') }}"><a href="{{ url('/') }}">{{ __('Welcome') }}</a></li>
+                <li class="nav__links__item md-mr-3 {{ active_link('/') }}"><a href="{{ url('/') }}">{{ __('Welcome') }}</a></li>
                 @guest
-                    <li class="nav__links__item {{ set_active('login') }}"><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                    <li class="nav__links__item {{ set_active('register') }}"><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                    <li class="nav__links__item md-mr-3 {{ active_link('login') }}"><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                    <li class="nav__links__item md-mr-3 {{ active_link('register') }}"><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
 
                 @else
                     <li class="nav__links__item nav__links__item--dropdown">

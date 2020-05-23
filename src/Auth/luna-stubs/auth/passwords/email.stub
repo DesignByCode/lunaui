@@ -4,10 +4,9 @@
 
 @section('content')
 <div class="wrapper">
-    <br>
-    <div class="row">
-        <div class="md-col-8 md-offset-2">
-            <div class="panel panel--default">
+    <div class="row pt-6">
+        <div class="md-col-6 md-offset-3">
+            <div class="panel shadow--1">
                 <div class="panel__header">{{ __('Reset Password') }}</div>
                 <div class="panel__body">
                     @if (session('status'))
@@ -21,7 +20,10 @@
                          @csrf
                          <div class="form__group {{ $errors->has('email') ? ' has__danger' : '' }} ">
                              <label for="email" class="form__lable">{{ __('E-Mail Address') }}</label>
-                             <input type="email" name="email" id="email" class="form__item" value="{{ old('email') }}">
+                             <div class="form__wrap">
+                                    <i class="lunacon lunacon-mail-envelope"></i>
+                                  <input type="email" name="email" id="email" class="form__item" value="{{ old('email') }}">
+                             </div>
                              @if ($errors->has('email'))
                                  <strong class="form__helper">
                                      {{ $errors->first('email') }}

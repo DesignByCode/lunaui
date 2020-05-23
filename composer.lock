@@ -4,43 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b3b1c486de6888906d523e2858b24bb",
+    "content-hash": "d65c0960046e8865bbf3e486d6225c27",
     "packages": [
         {
-            "name": "designbycode/laravel-helpers",
-            "version": "v2.0.1",
+            "name": "designbycode/active-links",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/DesignByCode/laravel-helpers.git",
-                "reference": "b962a724862ccbb2546d4c4925d71df7e65290af"
+                "url": "https://github.com/DesignByCode/active-links.git",
+                "reference": "0156fa843a98223e095a000d06f5d9cc4bec4d37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DesignByCode/laravel-helpers/zipball/b962a724862ccbb2546d4c4925d71df7e65290af",
-                "reference": "b962a724862ccbb2546d4c4925d71df7e65290af",
+                "url": "https://api.github.com/repos/DesignByCode/active-links/zipball/0156fa843a98223e095a000d06f5d9cc4bec4d37",
+                "reference": "0156fa843a98223e095a000d06f5d9cc4bec4d37",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "^7.0",
                 "php": "^7.2.5"
             },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5"
+            },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                },
+                "branch-alias": [],
                 "laravel": {
                     "providers": [
-                        "DesignByCode\\Helpers\\Providers\\HelpersServiceProvider"
+                        "DesignByCode\\ActiveLinks\\Providers\\ActiveLinksServiceProvider"
                     ],
                     "aliases": {
-                        "Set": "DesignByCode\\Helpers\\Facades\\Set"
+                        "Set": "DesignByCode\\ActiveLinks\\Facades\\Active"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "DesignByCode\\Helpers\\": "src/"
+                    "DesignByCode\\ActiveLinks\\": "src/"
                 },
                 "files": [
                     "src/helpers.php"
@@ -59,12 +60,12 @@
             "description": "Simple laravel helper utilities",
             "keywords": [
                 "active class",
+                "active-links",
                 "body class",
-                "laravel-helper",
                 "menu active",
                 "set classes"
             ],
-            "time": "2020-02-29T23:07:19+00:00"
+            "time": "2020-05-04T18:33:12+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -411,6 +412,16 @@
                 "datetime",
                 "time"
             ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/Carbon",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/nesbot/carbon",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-01T11:11:58+00:00"
         },
         {
@@ -584,6 +595,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-24T15:05:31+00:00"
         },
         {
@@ -633,6 +658,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-14T07:43:07+00:00"
         },
         {
@@ -934,6 +973,20 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-04T07:41:34+00:00"
         },
         {
@@ -1044,6 +1097,67 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "designbycode/laravel-helpers",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DesignByCode/laravel-helpers.git",
+                "reference": "b962a724862ccbb2546d4c4925d71df7e65290af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DesignByCode/laravel-helpers/zipball/b962a724862ccbb2546d4c4925d71df7e65290af",
+                "reference": "b962a724862ccbb2546d4c4925d71df7e65290af",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "DesignByCode\\Helpers\\Providers\\HelpersServiceProvider"
+                    ],
+                    "aliases": {
+                        "Set": "DesignByCode\\Helpers\\Facades\\Set"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DesignByCode\\Helpers\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Claude Myburgh",
+                    "email": "claude@deisgnbycode.co.za"
+                }
+            ],
+            "description": "Simple laravel helper utilities",
+            "keywords": [
+                "active class",
+                "body class",
+                "laravel-helper",
+                "menu active",
+                "set classes"
+            ],
+            "abandoned": "https://github.com/DesignByCode/active-links",
+            "time": "2020-02-29T23:07:19+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.3.0",
@@ -2682,5 +2796,6 @@
     "platform": {
         "php": "^7.2.5"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

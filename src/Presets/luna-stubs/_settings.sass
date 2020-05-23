@@ -21,7 +21,7 @@ $base-line-height: 24px !default
 $base-unit: 'em' !default
 
 // The default font family.
-$base-font-family: 'Roboto', sans-serif !default
+$base-font-family: 'Inter', sans-serif !default
 
 // The font sizes for h1-h6.
 $h1-font-size: 2.2   * $base-font-size !default
@@ -46,8 +46,8 @@ $normalize-vertical-rhythm: true !default
 
 $the__column__count: 12
 $the__width__of__wrapper: 98%
-$the__max__width__of__wrapper: 1140px
-$the__global__padding: 10px
+$the__max__width__of__wrapper: 1340px
+$the__global__padding: 12px
 
 
 // ==========================================
@@ -79,14 +79,15 @@ $_breakpoints : (xs: $grid__breakpoint__xs, sm: $grid__breakpoint__sm, md: $grid
 
 $global-border-radius: 3px
 
-$global-background-color: #fff
-$global-font-color: #333
+$global-background-color: #f3f3f3
+$global-font-color: #777
 $global-link-color: #2075d0
-$global-header-font: 'Montserrat Alternates', sans-serif
+$global-header-font: 'Rubik', sans-serif
 $global-body-font: $base-font-family // override normalize base font family
 
 $font-path: '../fonts'
 
+//@import "vendor/icons"
 @import "~luna-sass/Framework/sass/vendor/icons"
 // ==========================================
 // == Colors
@@ -94,29 +95,28 @@ $font-path: '../fonts'
 
 
 // Main Colors
-$primary-color: #0071bc
-$secondary-color: #e91e63
-$tri-color: #380f8f
-$dark-color: #0a0e24
+$primary-color: #16bdca
+$secondary-color: #ca1650
+$dark-color: #131a29
 
-$mute-color: #f7f7f7
-$mute-border-color: #ddddde //#e6e9ec
+$mute-color: #eff3f7
+$mute-border-color: darken($mute-color, 5%)
 
 $well-color: $mute-color
 $well-border-color: $mute-border-color
 
 // notifacation colors
-$info-color: #0071bc
-$warning-color: #f09300
-$success-color: #008c3a
-$danger-color: #ea4335
+$info-color: #16c2ca
+$warning-color: #ca6916
+$success-color: #16ca90
+$danger-color: #ca1616
 
 // ==========================================
 // == COLOR MAP
 // ==========================================
 
-$_colors: (primary: $primary-color, secondary: $secondary-color, tri: $tri-color, dark: $dark-color)
-$_custom_colors: ('black': #000, 'white': #fff)
+$_colors: (primary: $primary-color, secondary: $secondary-color, dark: $dark-color)
+$_custom_colors: ('black': #000, 'white': #fff, "mute": $mute-color, 'gray': lightgray)
 
 $_nofiy_colors: (default: #fff, info: $info-color, success: $success-color, warning: $warning-color, danger: $danger-color, )
 
@@ -140,19 +140,25 @@ $the__button__default__hover__background__color: #e1f3fc
 // ==========================================
 
 $navigation__breakpoint: 900px
-$navigation__height: 60px
+$navigation__height: 50px
 $navigation__dropdown__links__height: 50px
 
-$navigation__padding: 0px
+$navigation__padding: 10px
 $navigation__brand__color: #fff
-$navigation__brand__font__size: 28px
-$navigation__background__color: #0a0e24
+$navigation__brand__font__size: 22px
+$navigation__background__color: $dark-color
 
-$navigation__links__color: #eee
-$navigation__links__color__hover: #eee
+$navigation__links__color: #fff
+$navigation__links__color__hover: $dark-color
+$navigation__links__border__radius: $global-border-radius
+$navigation__links__border__transition__speed: none
+
 
 $navigation__links__background__color: transparent
-$navigation__links__background__color__hover: $primary-color
+$navigation__links__background__color__hover: #fff
+$navigation__links__border__radius__hover: $navigation__links__border__radius
+
+
 // Submenu
 $navigation__submenu__links__width: 200px
 $navigation__submenu__links__color: $dark-color
@@ -162,7 +168,7 @@ $navigation__submenu__links__background__color__hover: darken(#eee, 5%)
 
 // Nav Button
 $navicon__backgound__color: transparent
-$navicon__color: $dark-color
+$navicon__color: $mute-color
 $navicon__font__size: 16px
 $navicon__size: 40px
 
@@ -214,8 +220,8 @@ $the__notify__border__radius: $global-border-radius
 $scrollbar__track__background__color: $mute-color
 $scrollbar__thumb__background__color: $primary-color
 $scrollbar__thumb__border__color: $mute-color
-$scrollbar__thumb__border__width: 1px
-$scrollbar__track__width: 10px
+$scrollbar__thumb__border__width: 0px
+$scrollbar__track__width: 14px
 $scrollbar__track__height: 8px
 $scrollbar__track__radius: 0px
 $scrollbar__track__border__color: $mute-color
@@ -240,7 +246,7 @@ $scrolltotop__border__radius: 3px
 $table__background__color: #fff
 $table__border__color: $mute-border-color
 $table__background__color__default__hover: $mute-border-color
-$table__text__color__header: $dark-color
+$table__text__color__header: $global-font-color
 $table__text__color__default__hover: $global-font-color
 $table__background__color__striped__odd: $mute-border-color
 
@@ -251,33 +257,6 @@ $table__background__color__striped__odd: $mute-border-color
 $dropdown__container__background__color: #eee
 $dropdown__container__text__color: $global-font-color
 $dropdown__container__width: 260px
-
-
-
-
-// ==========================================
-// == Card
-// ==========================================
-
-
-$card__background__color: #fff
-$card__text__color: #eee
-$card__footer__background__color: $mute-color
-$card__footer__text__color: #ddd
-$card__footer__icon__color: $primary-color
-$card__shadow: 0 0 20px rgba(black,0.1)
-$card__shadow__hover: 0 0 50px rgba(black,0.3)
-
-$card__title__font__size:	$h2-font-size
-$card__title__font__color: $global-font-color
-$card__subtitle__font__size: $h3-font-size
-$card__subtitle__font__color: $primary-color
-$card__description__font__size:	$base-font-size
-$card__description__font__color: $global-font-color
-
-$card__label__background__color: $primary-color
-$card__label__text__color: #fff
-
 
 
 // ==========================================
@@ -292,18 +271,19 @@ $timeline__line__color: $primary-color
 $timeline__padding: $the__global__padding
 
 $timeline__flag__background__color: $mute-color
-$timeline__flag__text__color: $global-font-color
-$timeline__flag__radius: 20px 0
+$timeline__flag__text__color: #666
+$timeline__flag__radius: 10px 0
 
-$timeline__flag__pointer__color: $dark-color
+
+$timeline__flag__pointer__color: $primary-color
 $timeline__flag__marker__color: #fff
-$timeline__flag__marker__border__color: $dark-color
-$timeline__flag__marker__border__width: 5px
+$timeline__flag__marker__border__color: $primary-color
+$timeline__flag__marker__border__width: 3px
 
-$timeline__date__label__background__color: $dark-color
+$timeline__date__label__background__color: $secondary-color
 $timeline__date__label__text__color: #eee
 $timeline__date__label__padding: 5px 10px
-$timeline__date__label__border-radius: 20px 0
+$timeline__date__label__border-radius: 10px 0
 $timeline__date__label__position: top // top || bottom
 $timeline__date__offset: -$timeline__padding //not negative
 
@@ -330,23 +310,27 @@ $accordian__header__icon__color: $mute-border-color
 $accordian__header__icon__background__color: $mute-color
 $accordian__header__icon__background__border__color: $mute-border-color
 // icon active
-$accordian__header__icon__color__active: $mute-border-color
-$accordian__header__icon__background__color__active: #fff
-$accordian__header__icon__background__border__color__active: $mute-border-color
-
-
+$accordian__header__icon__color__active: $primary-color
+$accordian__header__icon__background__color__active: rgba($primary-color, 0.5)
+$accordian__header__icon__background__border__color__active: $primary-color
 
 
 // ==========================================
 // == List
 // ==========================================
-
-
 $list__background__color: #fff
 $list__background__color__hover: $mute-color
 $list__border__color: $mute-border-color
-$list__text__color: $dark-color
+$list__text__color: $global-font-color
 $list__text__color__hover: $primary-color
 $list__item__padding: $the__global__padding
 $list__link__color: $global-link-color
 $list__link__color__hover: $global-link-color
+
+
+// ==========================================
+// == Image Grid
+// ==========================================
+$image__grid__gaps: 2px
+$image__grid__border__color: $mute-border-color
+$image__grid__overlay__color: rgba(#000, 0.85)
